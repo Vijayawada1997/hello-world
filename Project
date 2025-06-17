@@ -1,0 +1,351 @@
+{
+  "BASIC": {
+    "day": 1,
+    "iterationCount": 10,
+    "bots": [
+      {
+        "product": "RAINFOREST_RESIN",
+        "bot": "BOT_CROSSER",
+        "period": 65,
+        "bot_id": "Gary",
+        "volume_low": 8,
+        "volume_high": 12,
+        "direction": 2,
+        "multilevel": false
+      },
+      {
+        "product": "RAINFOREST_RESIN",
+        "bot": "BOT_CROSSER",
+        "period": 35,
+        "bot_id": "Penelope",
+        "volume_low": 2,
+        "volume_high": 8,
+        "direction": 2,
+        "multilevel": false
+      },
+      {
+        "product": "RAINFOREST_RESIN",
+        "bot": "BOT_CROSSER",
+        "period": 15,
+        "bot_id": "Paris",
+        "volume_low": 1,
+        "volume_high": 2,
+        "direction": 2,
+        "multilevel": false
+      },
+      {
+        "product": "RAINFOREST_RESIN",
+        "bot": "BOT_HITTEE",
+        "period": 16,
+        "bot_id": "Pablo",
+        "volume_low": 1,
+        "volume_high": 5,
+        "direction": 2,
+        "investment_percentage": 0.0002
+      },
+      {
+        "product": "RAINFOREST_RESIN",
+        "bot": "BOT_HITTEE",
+        "period": 8,
+        "bot_id": "Paris",
+        "volume_low": 1,
+        "volume_high": 1,
+        "direction": 2,
+        "investment_percentage": 0.0002
+      },
+      {
+        "product": "RAINFOREST_RESIN",
+        "bot": "BOT_HITTEE",
+        "period": 50,
+        "bot_id": "Gina",
+        "volume_low": 6,
+        "volume_high": 12,
+        "direction": 2,
+        "investment_percentage": 0.0002
+      },
+      {
+        "product": "RAINFOREST_RESIN",
+        "bot": "BOT_HITTEE",
+        "period": 20,
+        "bot_id": "Caesar",
+        "volume_low": 2,
+        "volume_high": 6,
+        "direction": 2,
+        "investment_percentage": 0
+      },
+      {
+        "product": "RAINFOREST_RESIN",
+        "bot": "BOT_HITTEE",
+        "period": 3,
+        "bot_id": "Camilla",
+        "volume_low": 1,
+        "volume_high": 10,
+        "direction": 2,
+        "investment_percentage": -0.0002
+      },
+      {
+        "product": "RAINFOREST_RESIN",
+        "bot": "BOT_QUOTER",
+        "bot_id": "Charlie",
+        "volume_low": 20,
+        "volume_high": 30,
+        "percentage_width": 0.001
+      },
+      {
+        "product": "RAINFOREST_RESIN",
+        "bot": "BOT_QUOTER",
+        "bot_id": "Caesar",
+        "volume_low": 0,
+        "volume_high": 2,
+        "percentage_width": 0.0008
+      },
+      {
+        "product": "RAINFOREST_RESIN",
+        "bot": "BOT_HITTER",
+        "period": 2,
+        "bot_id": "Charlie",
+        "direction": 2,
+        "fixed_offset_perc": 0.00005,
+        "credit_per_volume_perc": 0.000022,
+        "max_volume": 20
+      },
+      {
+        "product": "SQUID_INK",
+        "bot": "BOT_CROSSER",
+        "period": 60,
+        "bot_id": "Gary",
+        "volume_low": 8,
+        "volume_high": 15,
+        "direction": 2,
+        "multilevel": false
+      },
+      {
+        "product": "SQUID_INK",
+        "bot": "BOT_CROSSER",
+        "period": 35,
+        "bot_id": "Penelope",
+        "volume_low": 4,
+        "volume_high": 15,
+        "direction": 2,
+        "multilevel": false
+      },
+      {
+        "product": "SQUID_INK",
+        "bot": "BOT_CROSSER",
+        "period": 15,
+        "bot_id": "Paris",
+        "volume_low": 1,
+        "volume_high": 2,
+        "direction": 2,
+        "multilevel": false
+      },
+      {
+        "product": "SQUID_INK",
+        "bot": "BOT_HITTEE",
+        "period": 20,
+        "bot_id": "Pablo",
+        "volume_low": 2,
+        "volume_high": 5,
+        "direction": 2,
+        "investment_percentage": 0.0003
+      },
+      {
+        "product": "SQUID_INK",
+        "bot": "BOT_HITTEE",
+        "period": 6,
+        "bot_id": "Paris",
+        "volume_low": 1,
+        "volume_high": 1,
+        "direction": 2,
+        "investment_percentage": 0.0005
+      },
+      {
+        "product": "SQUID_INK",
+        "bot": "BOT_HITTEE",
+        "period": 55,
+        "bot_id": "Gina",
+        "volume_low": 7,
+        "volume_high": 10,
+        "direction": 2,
+        "investment_percentage": 0.0004
+      },
+      {
+        "product": "SQUID_INK",
+        "bot": "BOT_HITTEE",
+        "period": 20,
+        "bot_id": "Caesar",
+        "volume_low": 2,
+        "volume_high": 6,
+        "direction": 2,
+        "investment_percentage": 0
+      },
+      {
+        "product": "SQUID_INK",
+        "bot": "BOT_HITTEE",
+        "period": 3,
+        "bot_id": "Camilla",
+        "volume_low": 1,
+        "volume_high": 8,
+        "direction": 2,
+        "investment_percentage": -0.0004
+      },
+      {
+        "product": "SQUID_INK",
+        "bot": "BOT_QUOTER",
+        "bot_id": "Charlie",
+        "volume_low": 20,
+        "volume_high": 30,
+        "percentage_width": 0.0012
+      },
+      {
+        "product": "SQUID_INK",
+        "bot": "BOT_QUOTER",
+        "bot_id": "Caesar",
+        "volume_low": 0,
+        "volume_high": 2,
+        "percentage_width": 0.0011,
+        "fixed_offset_perc": 0.0001,
+        "credit_per_volume_perc": 0.000011,
+        "max_volume": 20
+      },
+      {
+        "product": "SQUID_INK",
+        "bot": "BOT_HITTER",
+        "period": 2,
+        "bot_id": "Charlie",
+        "direction": 2,
+        "fixed_offset_perc": 0.00005,
+        "credit_per_volume_perc": 0.000022,
+        "max_volume": 20
+      },
+      {
+        "product": "SQUID_INK",
+        "bot": "BOT_INSIDER",
+        "bot_id": "Olivia",
+        "volume": 15,
+        "smart": true
+      },
+      {
+        "product": "MAGNIFICENT_MACARONS",
+        "bot": "BOT_SMART_QUOTER",
+        "bot_id": "Charlie",
+        "volume_low": 10,
+        "volume_high": 20,
+        "percentage_width": 0.5
+      },
+      {
+        "product": "MAGNIFICENT_MACARONS",
+        "bot": "BOT_SMART_QUOTER",
+        "bot_id": "Caesar",
+        "volume_low": 5,
+        "volume_high": 10,
+        "percentage_width": 0.7
+      },
+      {
+        "product": "MAGNIFICENT_MACARONS",
+        "bot": "BOT_SMART_QUOTER",
+        "bot_id": "Charlie",
+        "volume_low": 20,
+        "volume_high": 30,
+        "percentage_width": 0.004
+      },
+      {
+        "product": "MAGNIFICENT_MACARONS",
+        "bot": "BOT_SMART_HITTEE",
+        "period": 60,
+        "bot_id": "Camilla",
+        "volume_low": 2,
+        "volume_high": 5,
+        "direction": 2,
+        "investment_percentage": 0.002
+      },
+      {
+        "product": "MAGNIFICENT_MACARONS",
+        "bot": "BOT_SMART_HITTEE",
+        "period": 20,
+        "bot_id": "Paris",
+        "volume_low": 5,
+        "volume_high": 10,
+        "direction": 2,
+        "investment_percentage": 0.0001
+      },
+      {
+        "product": "MAGNIFICENT_MACARONS",
+        "bot": "BOT_SMART_LAZY_QUOTER",
+        "bot_id": "Charlie",
+        "volume_low": 5,
+        "volume_high": 10,
+        "delay": 1000,
+        "width_fraction": 0.7
+      },
+      {
+        "product": "MAGNIFICENT_MACARONS",
+        "bot": "BOT_SMART_BOUND_HITTEE",
+        "period": 80,
+        "bot_id": "Caesar",
+        "volume_low": 5,
+        "volume_high": 10,
+        "direction": 2,
+        "width_fraction": 0.5
+      },
+      {
+        "product": "MAGNIFICENT_MACARONS",
+        "bot": "BOT_SMART_BOUND_HITTEE",
+        "period": 40,
+        "bot_id": "Charlie",
+        "volume_low": 6,
+        "volume_high": 12,
+        "direction": 2,
+        "width_fraction": 0.3
+      },
+      {
+        "product": "MAGNIFICENT_MACARONS",
+        "period": 2,
+        "bot": "BOT_SMART_HITTER",
+        "bot_id": "Camilla",
+        "fixed_offset_perc": 5e-7,
+        "credit_per_volume_perc": 0.00001,
+        "direction": 2,
+        "max_volume": 10
+      },
+      {
+        "product": "MAGNIFICENT_MACARONS",
+        "bot": "BOT_SMART_HITTER",
+        "period": 5,
+        "bot_id": "Caesar",
+        "direction": 2,
+        "fixed_offset_perc": 0,
+        "credit_per_volume_perc": 0.000003,
+        "max_volume": 10
+      },
+      {
+        "product": "MAGNIFICENT_MACARONS",
+        "bot": "BOT_SMART_CROSSER",
+        "period": 40,
+        "bot_id": "Paris",
+        "volume_low": 4,
+        "volume_high": 7,
+        "direction": 2,
+        "multilevel": false
+      },
+      {
+        "product": "MAGNIFICENT_MACARONS",
+        "bot": "BOT_SMART_OBSERVER",
+        "bot_id": "Silent"
+      }
+    ],
+    "products": {
+      "RAINFOREST_RESIN": {
+        "tickSize": 1
+      },
+      "SQUID_INK": {
+        "tickSize": 1
+      },
+      "MAGNIFICENT_MACARONS": {
+        "tickSize": 1,
+        "storageCosts": 0.1,
+        "enforceConversion": true
+      }
+    }
+  }
+}
