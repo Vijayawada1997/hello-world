@@ -1,0 +1,129 @@
+public abstract class Bot {
+    protected String product;
+    protected String botId;
+    protected int direction;
+
+    public Bot(String product, String botId, int direction) {
+        this.product = product;
+        this.botId = botId;
+        this.direction = direction;
+    }
+
+    public abstract void act();
+}
+public class CrosserBot extends Bot {
+    private int period;
+    private int volumeLow;
+    private int volumeHigh;
+    private boolean multilevel;
+
+    public CrosserBot(String product, String botId, int direction, int period, int volumeLow, int volumeHigh, boolean multilevel) {
+        super(product, botId, direction);
+        this.period = period;
+        this.volumeLow = volumeLow;
+        this.volumeHigh = volumeHigh;
+        this.multilevel = multilevel;
+    }
+
+    @Override
+    public void act() {
+        System.out.println("CrosserBot [" + botId + "] acting on " + product);
+        // Simulation logic here
+    }
+}
+public class Product {
+    private String name;
+    private int tickSize;
+    private double storageCosts;
+    private boolean enforceConversion;
+
+    public Product(String name, int tickSize, double storageCosts, boolean enforceConversion) {
+        this.name = name;
+        this.tickSize = tickSize;
+        this.storageCosts = storageCosts;
+        this.enforceConversion = enforceConversion;
+    }
+
+    public Product(String name, int tickSize) {
+        this(name, tickSize, 0.0, false);
+    }
+
+    // Getters and simulation-related methods
+}
+public class Simulation {
+    private List<Bot> bots = new ArrayList<>();
+    private Map<String, Product> products = new HashMap<>();
+    private int day;
+    private int iterationCount;
+
+    public Simulation(int day, int iterationCount) {
+        this.day = day;
+        this.iterationCount = iterationCount;
+    }
+
+    public void addBot(Bot bot) {
+        bots.add(bot);
+    }
+
+    public void addProduct(Product product) {
+        products.put(product.name, product);
+    }
+
+    public void run() {
+        for (int i = 0; i < iterationCount; i++) {
+            System.out.println("Day " + day + " - Iteration " + (i + 1));
+            for (Bot bot : bots) {
+                bot.act();
+            }
+        }
+    }
+}
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import java.io.File;
+
+public class Main {
+    public static void main(String[] args) throws Exception {
+        ObjectMapper mapper = new ObjectMapper();
+        JsonNode root = mapper.readTree(new File("simulation.json"));
+        JsonNode basic = root.get("BASIC");
+
+        int day = basic.get("day").asInt();
+        int iterationCount = basic.get("iterationCount").asInt();
+        Simulation simulation = new Simulation(day, iterationCount);
+
+        // Load products
+        JsonNode productsNode = basic.get("products");
+        productsNode.fields().forEachRemaining(entry -> {
+            String productName = entry.getKey();
+            JsonNode productData = entry.getValue();
+            int tickSize = productData.get("tickSize").asInt();
+            double storageCosts = productData.has("storageCosts") ? productData.get("storageCosts").asDouble() : 0.0;
+            boolean enforceConversion = productData.has("enforceConversion") && productData.get("enforceConversion").asBoolean();
+            simulation.addProduct(new Product(productName, tickSize, storageCosts, enforceConversion));
+        });
+
+        // Load bots
+        for (JsonNode botNode : basic.get("bots")) {
+            String type = botNode.get("bot").asText();
+            String product = botNode.get("product").asText();
+            String botId = botNode.get("bot_id").asText();
+            int direction = botNode.get("direction").asInt();
+
+            switch (type) {
+                case "BOT_CROSSER":
+                    int period = botNode.get("period").asInt();
+                    int volumeLow = botNode.get("volume_low").asInt();
+                    int volumeHigh = botNode.get("volume_high").asInt();
+                    boolean multilevel = botNode.has("multilevel") && botNode.get("multilevel").asBoolean();
+                    simulation.addBot(new CrosserBot(product, botId, direction, period, volumeLow, volumeHigh, multilevel));
+                    break;
+                // Repeat for other bot types
+            }
+        }
+
+        // Run simulation
+        simulation.run();
+    }
+}
